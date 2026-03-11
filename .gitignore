@@ -1,16 +1,17 @@
-# Environments
+# Django/Python Junk
+__pycache__/
+*.pyc
+db.sqlite3
 .env
+
+# Virtual Environments
 env/
 venv/
 ENV/
 
-# Python
-*.pyc
-__pycache__/
+# OS Junk
+.DS_Store
+Thumbs.db
 
-# Database
-db.sqlite3
-
-# Static/Media
-/static/
-/media/
+# Static files (since you'll collect these for S3 later)
+/staticfiles/
