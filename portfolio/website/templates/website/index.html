@@ -7,8 +7,8 @@
 <!-- Hero Section -->
 <section class="hero-section d-flex align-items-center">
     <div class="container">
-        <div class="row align-items-center">
-            <div class="col-lg-7">
+        <div class="row align-items-center flex-column-reverse flex-md-row">
+            <div class="col-md-8 mt-4 mt-md-0">
                 <p class="text-accent fw-semibold mb-2 hero-greeting">👋 Hey there, I'm</p>
                 <h1 class="display-3 fw-bold mb-3">Sagar N Mutalik</h1>
                 <h2 class="h4 text-muted fw-normal mb-4">
@@ -16,8 +16,11 @@
                     <span class="typed-cursor">|</span>
                 </h2>
                 <p class="lead text-secondary mb-5">
-                    Passionate about infrastructure automation, managing scalable cloud environments on AWS, and working
-                    extensively with Linux systems to build resilient and reliable CI/CD pipelines.
+                    Motivated Engineering student with a strong focus on DevOps and Cloud Computing.
+                    Hands-on experience designing CI/CD pipelines and automating Java application builds
+                    using Jenkins, Maven, and GitHub. Solid understanding of Linux environments and AWS EC2
+                    management. Seeking a DevOps or Cloud Internship to apply infrastructure automation
+                    skills in a production environment.
                 </p>
                 <div class="d-flex flex-wrap gap-3">
                     <a href="{% url 'projects' %}" class="btn btn-accent btn-lg px-4">
@@ -28,21 +31,10 @@
                     </a>
                 </div>
             </div>
-            <div class="col-lg-5 text-center mt-5 mt-lg-0">
-                <div class="hero-graphic">
-                    <div class="tech-orbit">
-                        <div class="orbit-ring orbit-1">
-                            <span class="tech-badge" title="AWS"><i class="bi bi-cloud-fill"></i></span>
-                        </div>
-                        <div class="orbit-ring orbit-2">
-                            <span class="tech-badge" title="Linux"><i class="bi bi-terminal-fill"></i></span>
-                        </div>
-                        <div class="orbit-ring orbit-3">
-                            <span class="tech-badge" title="CI/CD"><i class="bi bi-gear-wide-connected"></i></span>
-                        </div>
-                        <div class="hero-avatar">SNM</div>
-                    </div>
-                </div>
+            <div class="col-md-4 text-center">
+                <img src="{% static 'website/img/profile.jpg' %}" alt="Sagar N Mutalik"
+                    class="img-fluid rounded-circle shadow-lg border border-3 border-accent"
+                    style="max-width: 250px; width: 100%; aspect-ratio: 1/1; object-fit: cover;">
             </div>
         </div>
     </div>
@@ -63,11 +55,11 @@
             <div class="col-md-6 col-lg-3">
                 <div class="skill-card p-4 text-center h-100">
                     <i class="bi bi-gear-fill fs-1 text-accent mb-3 d-block"></i>
-                    <h5 class="fw-semibold mb-3">DevOps</h5>
+                    <h5 class="fw-semibold mb-3">DevOps &amp; CI/CD</h5>
                     <div class="d-flex flex-wrap justify-content-center gap-2">
                         <span class="badge bg-secondary">Jenkins</span>
                         <span class="badge bg-secondary">Maven</span>
-                        <span class="badge bg-secondary">Git</span>
+                        <span class="badge bg-secondary">Git &amp; GitHub</span>
                     </div>
                 </div>
             </div>
@@ -79,7 +71,7 @@
                     <h5 class="fw-semibold mb-3">Cloud</h5>
                     <div class="d-flex flex-wrap justify-content-center gap-2">
                         <span class="badge bg-secondary">AWS EC2</span>
-                        <span class="badge bg-secondary">AWS IAM</span>
+                        <span class="badge bg-secondary">IAM &amp; Security Groups</span>
                     </div>
                 </div>
             </div>
@@ -90,8 +82,7 @@
                     <i class="bi bi-display fs-1 text-accent mb-3 d-block"></i>
                     <h5 class="fw-semibold mb-3">Operating Systems</h5>
                     <div class="d-flex flex-wrap justify-content-center gap-2">
-                        <span class="badge bg-secondary">Linux</span>
-                        <span class="badge bg-secondary">Ubuntu</span>
+                        <span class="badge bg-secondary">Linux(Ubuntu)</span>
                     </div>
                 </div>
             </div>
@@ -103,13 +94,27 @@
                     <h5 class="fw-semibold mb-3">Programming</h5>
                     <div class="d-flex flex-wrap justify-content-center gap-2">
                         <span class="badge bg-secondary">Java</span>
-                        <span class="badge bg-secondary">Python</span>
-                        <span class="badge bg-secondary">Bash</span>
+                        <span class="badge bg-secondary">BashShell Scripting</span>
                     </div>
                 </div>
             </div>
 
+            <!-- Tools & Concepts -->
+            <div class="col-md-6 col-lg-12">
+                <div class="skill-card p-4 text-center h-100">
+                    <i class="bi bi-tools fs-1 text-accent mb-3 d-block"></i>
+                    <h5 class="fw-semibold mb-3">Tools &amp; Concepts</h5>
+                    <div class="d-flex flex-wrap justify-content-center gap-2">
+                        <span class="badge bg-secondary">CI/CD Pipeline Design</span>
+                        <span class="badge bg-secondary">Build &amp; Deployment Automation</span>
+                        <span class="badge bg-secondary">Version Control systems</span>
+                    </div>
+                </div>
+            </div>
         </div>
+    </div>
+
+    </div>
     </div>
 </section>
 {% endblock %}
