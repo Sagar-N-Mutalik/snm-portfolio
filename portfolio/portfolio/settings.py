@@ -37,6 +37,10 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    # Third party apps
+    'django_distill',
+    # Portfolio apps
+    'website',
 ]
 
 MIDDLEWARE = [
@@ -114,4 +118,15 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/6.0/howto/static-files/
 
-STATIC_URL = 'static/'
+STATIC_URL = '/static/'
+
+# Where Django looks for static files during development
+STATICFILES_DIRS = [
+    BASE_DIR / 'website' / 'static',
+]
+
+# Where collectstatic gathers all files (e.g., for upload to S3)
+STATIC_ROOT = BASE_DIR / 'staticfiles'
+
+# Distill configuration for static site generation
+DISTILL_DIR = BASE_DIR / 'dist'

@@ -1,0 +1,71 @@
+{% extends 'website/base.html' %}
+
+{% block title %}Projects | Sagar N Mutalik{% endblock %}
+{% block meta_description %}A showcase of Cloud & DevOps projects by Sagar N Mutalik — Infrastructure automation, CI/CD
+pipelines, and AWS deployments.{% endblock %}
+
+{% block content %}
+<section class="page-hero py-5 mt-5">
+    <div class="container py-4">
+        <h1 class="display-5 fw-bold mb-2">Projects</h1>
+        <p class="text-muted lead">A showcase of my Cloud &amp; DevOps work.</p>
+    </div>
+</section>
+
+<section class="container pb-5">
+    <div class="row g-4 justify-content-center">
+
+        <!-- Project Card 1: CI/CD Pipeline -->
+        <div class="col-md-6 col-lg-6">
+            <div class="project-card h-100 p-4">
+                <div class="d-flex align-items-center mb-3">
+                    <span class="project-icon me-3"><i class="bi bi-gear-wide-connected fs-3 text-accent"></i></span>
+                    <h5 class="mb-0 fw-semibold">Automated CI/CD Pipeline (vProfile)</h5>
+                </div>
+                <p class="text-muted small mb-4">
+                    Built a comprehensive Declarative Jenkins Pipeline integrating continuous integration, static code
+                    analysis via SonarQube, and artifact versioning using Nexus. Streamlined the software delivery
+                    process and assured high code quality.
+                </p>
+                <div class="mt-auto">
+                    <div class="d-flex flex-wrap gap-2 mb-4">
+                        <span class="badge-tech">Jenkins Pipeline</span>
+                        <span class="badge-tech">SonarQube</span>
+                        <span class="badge-tech">Nexus</span>
+                    </div>
+                    <a href="#" class="btn btn-outline-light btn-sm w-100" target="_blank">
+                        <i class="bi bi-github me-2"></i> View on GitHub
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Project Card 2: Restaurant Management Deployment -->
+        <div class="col-md-6 col-lg-6">
+            <div class="project-card h-100 p-4">
+                <div class="d-flex align-items-center mb-3">
+                    <span class="project-icon me-3"><i class="bi bi-diagram-3-fill fs-3 text-accent"></i></span>
+                    <h5 class="mb-0 fw-semibold">Automated Restaurant Management Deployment</h5>
+                </div>
+                <p class="text-muted small mb-4">
+                    Orchestrated the deployment of a Django-based restaurant management system leveraging Docker
+                    containers. Provisioned the necessary infrastructure on AWS EC2 and configured external DNS
+                    resolving to a custom GoDaddy domain (ssnrm.xyz).
+                </p>
+                <div class="mt-auto">
+                    <div class="d-flex flex-wrap gap-2 mb-4">
+                        <span class="badge-tech">Django</span>
+                        <span class="badge-tech">Docker</span>
+                        <span class="badge-tech">AWS EC2</span>
+                        <span class="badge-tech">DNS</span>
+                    </div>
+                    <a href="#" class="btn btn-outline-light btn-sm w-100" target="_blank">
+                        <i class="bi bi-github me-2"></i> View on GitHub
+                    </a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+{% endblock %}
