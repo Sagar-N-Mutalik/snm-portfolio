@@ -10,7 +10,7 @@
         <div class="row align-items-center flex-column-reverse flex-md-row">
             <div class="col-md-8 mt-4 mt-md-0">
                 <p class="text-accent fw-semibold mb-2 hero-greeting">👋 Hey there, I'm</p>
-                <h1 class="display-3 fw-bold mb-3">Sagar N Mutalik</h1>
+                <h1 class="display-3 fw-bold mb-3"><span class="hero-name">Sagar N Mutalik</span></h1>
                 <h2 class="h4 text-muted fw-normal mb-4">
                     Cloud &amp; DevOps Enthusiast &amp; Engineering Student
                     <span class="typed-cursor">|</span>
@@ -32,9 +32,11 @@
                 </div>
             </div>
             <div class="col-md-4 text-center">
-                <img src="{% static 'website/img/profile.jpg' %}" alt="Sagar N Mutalik"
-                    class="img-fluid rounded-circle shadow-lg border border-3 border-accent"
-                    style="max-width: 250px; width: 100%; aspect-ratio: 1/1; object-fit: cover;">
+                <div class="hero-image-wrapper">
+                    <img src="{% static 'website/img/profile.jpeg' %}" alt="Sagar N Mutalik"
+                        class="img-fluid rounded-circle profile-img-styled"
+                        style="max-width: 320px; width: 100%; aspect-ratio: 1/1; object-fit: cover;">
+                </div>
             </div>
         </div>
     </div>
