@@ -359,15 +359,4 @@ body {
         min-height: auto;
         padding: 4rem 0;
     }
-
-    .tech-orbit {
-        width: 200px;
-        height: 200px;
-    }
-
-    .hero-avatar {
-        width: 70px;
-        height: 70px;
-        font-size: 0.9rem;
-    }
 }
