@@ -1,0 +1,63 @@
+pipeline {
+    agent any
+
+    environment {
+        DOCKER_IMAGE = "sagarnm/snm-portfolio"
+        DOCKER_TAG = "latest" // Or use ${BUILD_NUMBER} for versioning
+        APP_EC2_IP = "52.91.141.50"
+        SSH_CREDENTIALS_ID = "app-ec2-ssh-key" // Create this in Jenkins Credentials
+        DOCKER_CREDENTIALS_ID = "docker-hub-credentials" // Create this in Jenkins Credentials
+    }
+
+    stages {
+        stage('Checkout') {
+            steps {
+                checkout scm
+            }
+        }
+
+        stage('Build Docker Image') {
+            steps {
+                script {
+                    // Navigate to the directory containing the Dockerfile
+                    dir('portfolio') { 
+                        sh "docker build -t ${DOCKER_IMAGE}:${DOCKER_TAG} ."
+                    }
+                }
+            }
+        }
+
+        stage('Push to Docker Registry') {
+            steps {
+                script {
+                    withCredentials([usernamePassword(credentialsId: env.DOCKER_CREDENTIALS_ID, passwordVariable: 'DOCKER_PASS', usernameVariable: 'DOCKER_USER')]) {
+                        sh "echo \$DOCKER_PASS | docker login -u \$DOCKER_USER --password-stdin"
+                        sh "docker push ${DOCKER_IMAGE}:${DOCKER_TAG}"
+                    }
+                }
+            }
+        }
+
+        stage('Deploy to App EC2') {
+            steps {
+                sshagent([env.SSH_CREDENTIALS_ID]) {
+                    sh """
+                        ssh -o StrictHostKeyChecking=no ubuntu@${APP_EC2_IP} '
+                            docker pull ${DOCKER_IMAGE}:${DOCKER_TAG}
+                            docker stop snm-portfolio || true
+                            docker rm snm-portfolio || true
+                            docker run -d -p 80:8000 --name snm-portfolio --restart always ${DOCKER_IMAGE}:${DOCKER_TAG}
+                        '
+                    """
+                }
+            }
+        }
+    }
+    
+    post {
+        always {
+            // Clean up local Docker images on the Jenkins EC2 to save space
+            sh "docker rmi ${DOCKER_IMAGE}:${DOCKER_TAG} || true"
+        }
+    }
+}
