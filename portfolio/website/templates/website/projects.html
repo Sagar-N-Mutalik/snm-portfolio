@@ -1,8 +1,7 @@
 {% extends 'website/base.html' %}
 
 {% block title %}Projects | Sagar N Mutalik{% endblock %}
-{% block meta_description %}A showcase of Cloud & DevOps projects by Sagar N Mutalik — Infrastructure automation, CI/CD
-pipelines, and AWS deployments.{% endblock %}
+{% block meta_description %}A showcase of Cloud & DevOps projects by Sagar N Mutalik — Infrastructure automation, CI/CD pipelines, and AWS deployments.{% endblock %}
 
 {% block content %}
 <section class="page-hero py-5 mt-5">
@@ -15,66 +14,104 @@ pipelines, and AWS deployments.{% endblock %}
 <section class="container pb-5">
     <div class="row g-4 justify-content-center">
 
-        <!-- Project Card 1: CI/CD Pipeline -->
-        <div class="col-md-6 col-lg-6">
-            <div class="project-card h-100 p-4">
-                <div class="d-flex align-items-center mb-3">
-                    <span class="project-icon me-3"><i class="bi bi-gear-wide-connected fs-3 text-accent"></i></span>
-                    <h5 class="mb-0 fw-semibold">Automated CI/CD Pipeline (vProfile)</h5>
+        <div class="col-md-6 col-lg-4">
+            <div class="project-card h-100 p-4 d-flex flex-column">
+                
+                <div class="mb-4">
+                    <div class="d-inline-flex align-items-center justify-content-center rounded-circle mb-3" style="width: 50px; height: 50px; background-color: var(--accent-subtle);">
+                        <i class="bi bi-gear-wide-connected fs-4 text-accent"></i>
+                    </div>
+                    <h5 class="fw-bold mb-2">Automated CI/CD Pipeline</h5>
+                    <p class="text-accent small fw-semibold mb-0">vProfile App</p>
                 </div>
-                <div class="text-muted small mb-4">
-                    <ul class="mb-0 ps-3">
-                        <li class="mb-1">Developed a Declarative Jenkins Pipeline to automate the build, test, and
-                            release lifecycle for a multi-tier Java application.</li>
-                        <li class="mb-1">Integrated SonarQube Quality Gates to enforce code standards and Nexus
-                            Repository for secure artifact versioning.</li>
-                        <li class="mb-1">Configured Slack integration for real-time build status notifications, ensuring
-                            immediate feedback loops.</li>
+                
+                <div class="text-muted small mb-4 flex-grow-1">
+                    <p class="mb-3">A fully declarative Jenkins Pipeline designed to automate the build, test, and release lifecycle for a multi-tier Java application.</p>
+                    <ul class="list-unstyled mb-0">
+                        <li class="mb-2"><i class="bi bi-check2-circle text-accent me-2"></i>SonarQube Quality Gates</li>
+                        <li class="mb-2"><i class="bi bi-check2-circle text-accent me-2"></i>Nexus Artifact Versioning</li>
+                        <li class="mb-0"><i class="bi bi-check2-circle text-accent me-2"></i>Slack Real-time Notifications</li>
                     </ul>
                 </div>
-                <div class="mt-auto">
+                
+                <div class="mt-auto border-top border-secondary-subtle pt-4">
                     <div class="d-flex flex-wrap gap-2 mb-4">
                         <span class="badge-tech">Jenkins</span>
                         <span class="badge-tech">Maven</span>
                         <span class="badge-tech">SonarQube</span>
                         <span class="badge-tech">Nexus</span>
-                        <span class="badge-tech">Git</span>
-                        <span class="badge-tech">Linux</span>
                     </div>
-                    <a href="#" class="btn btn-outline-light btn-sm w-100" target="_blank">
+                    
+                    <a href="https://github.com/Sagar-N-Mutalik/vprofile-project.git" class="btn btn-outline-light btn-sm w-100 project-btn" target="_blank" rel="noopener noreferrer">
                         <i class="bi bi-github me-2"></i> View on GitHub
                     </a>
                 </div>
             </div>
         </div>
 
-        <!-- Project Card 2: Restaurant Management Deployment -->
-        <div class="col-md-6 col-lg-6">
-            <div class="project-card h-100 p-4">
-                <div class="d-flex align-items-center mb-3">
-                    <span class="project-icon me-3"><i class="bi bi-diagram-3-fill fs-3 text-accent"></i></span>
-                    <h5 class="mb-0 fw-semibold">Automated Restaurant Management Deployment</h5>
+        <div class="col-md-6 col-lg-4">
+            <div class="project-card h-100 p-4 d-flex flex-column">
+                
+                <div class="mb-4">
+                    <div class="d-inline-flex align-items-center justify-content-center rounded-circle mb-3" style="width: 50px; height: 50px; background-color: var(--accent-subtle);">
+                        <i class="bi bi-hdd-network fs-4 text-accent"></i>
+                    </div>
+                    <h5 class="fw-bold mb-2">Web App Cloud Deployment</h5>
+                    <p class="text-accent small fw-semibold mb-0">Restaurant Management</p>
                 </div>
-                <div class="text-muted small mb-4">
-                    <ul class="mb-0 ps-3">
-                        <li class="mb-1">Deployed a mobile-responsive, containerized Django web app to AWS EC2 with a
-                            custom GoDaddy domain (ssnrm.xyz), automating the CI/CD pipeline via Jenkins and Docker.
-                        </li>
-                        <li class="mb-1">Leveraged AI code generation for the application logic to prioritize hands-on
-                            infrastructure automation, DNS configuration, and deployment strategies.</li>
-                        <li class="mb-1">Optimized cloud resource management by utilizing AWS free-tier limits to
-                            maintain a strictly zero-cost infrastructure footprint.</li>
+                
+                <div class="text-muted small mb-4 flex-grow-1">
+                    <p class="mb-3">Deployed a mobile-responsive, containerized Django web application to AWS EC2, mapping it to a custom GoDaddy domain (ssnrm.xyz).</p>
+                    <ul class="list-unstyled mb-0">
+                        <li class="mb-2"><i class="bi bi-check2-circle text-accent me-2"></i>Zero-cost AWS Free-Tier</li>
+                        <li class="mb-2"><i class="bi bi-check2-circle text-accent me-2"></i>Docker Containerization</li>
+                        <li class="mb-0"><i class="bi bi-check2-circle text-accent me-2"></i>Custom DNS Configuration</li>
                     </ul>
                 </div>
-                <div class="mt-auto">
+                
+                <div class="mt-auto border-top border-secondary-subtle pt-4">
                     <div class="d-flex flex-wrap gap-2 mb-4">
                         <span class="badge-tech">Django</span>
                         <span class="badge-tech">Docker</span>
-                        <span class="badge-tech">Jenkins</span>
                         <span class="badge-tech">AWS EC2</span>
-                        <span class="badge-tech">GoDaddy</span>
+                        <span class="badge-tech">DNS</span>
                     </div>
-                    <a href="#" class="btn btn-outline-light btn-sm w-100" target="_blank">
+
+                    <a href="https://github.com/Sagar-N-Mutalik/restaurant-management-system.git" class="btn btn-outline-light btn-sm w-100 project-btn" target="_blank" rel="noopener noreferrer">
+                        <i class="bi bi-github me-2"></i> View on GitHub
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4">
+            <div class="project-card h-100 p-4 d-flex flex-column">
+                
+                <div class="mb-4">
+                    <div class="d-inline-flex align-items-center justify-content-center rounded-circle mb-3" style="width: 50px; height: 50px; background-color: var(--accent-subtle);">
+                        <i class="bi bi-arrow-repeat fs-4 text-accent"></i>
+                    </div>
+                    <h5 class="fw-bold mb-2">Django Web App</h5>
+                    <p class="text-accent small fw-semibold mb-0">NISBadges-Platform</p>
+                </div>
+                
+                <div class="text-muted small mb-4 flex-grow-1">
+                    <p class="mb-3">Automation and gamification platform built for the NIE IEEE Student Branch (NISB)</p>
+                    <ul class="list-unstyled mb-0">
+                        <li class="mb-2"><i class="bi bi-check2-circle text-accent me-2"></i>Built using Django</li>
+                        <li class="mb-2"><i class="bi bi-check2-circle text-accent me-2"></i>HTML5, CSS3 (Glassmorphism), Vanilla JavaScript</li>
+                        <li class="mb-0"><i class="bi bi-check2-circle text-accent me-2"></i>SQLite (Development)</li>
+                    </ul>
+                </div>
+                
+                <div class="mt-auto border-top border-secondary-subtle pt-4">
+                    <div class="d-flex flex-wrap gap-2 mb-4">
+                        <span class="badge-tech">Django</span>
+                        <span class="badge-tech">HTML5,CSS3</span>
+                        <span class="badge-tech">SQLite</span>
+                    </div>
+
+                    <a href="https://github.com/Sagar-N-Mutalik/NISBadges-platform.git" class="btn btn-outline-light btn-sm w-100 project-btn" target="_blank" rel="noopener noreferrer">
                         <i class="bi bi-github me-2"></i> View on GitHub
                     </a>
                 </div>

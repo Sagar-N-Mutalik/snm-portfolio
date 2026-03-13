@@ -360,3 +360,17 @@ body {
         padding: 4rem 0;
     }
 }
+
+
+/* ========== PROJECT BUTTONS ========== */
+.project-btn {
+    transition: var(--transition);
+    border-color: var(--border-soft);
+}
+
+.project-btn:hover {
+    background-color: var(--accent);
+    color: #000 !important;
+    border-color: var(--accent);
+    box-shadow: 0 4px 15px rgba(0, 212, 255, 0.2);
+}
